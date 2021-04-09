@@ -18,15 +18,12 @@ public class Temporada {
 	}
 	
 	//Problema 9
-	public boolean addCapitulo(Capitulo c) {
-		boolean ok;
-		if (!capitulos.contains(c)) {//se debe definir equals en capitulo
-			capitulos.add(c);
-			ok=true;
-		} else {
-			ok=false;
-		}
-		return ok;
+	public boolean addCapitulo(Capitulo capitulo) {
+		if (!capitulos.contains(capitulo)) {
+			capitulos.add(capitulo);
+			return true;
+		}else
+			return true;
 	}
 	public String ListaCapitulos() {
 		String res = "";
@@ -60,6 +57,13 @@ public class Temporada {
 			total = total+getDuracion();
 		}
 		return total;
+	}
+	@Override
+	public String toString() {
+		String res= "Serie [titulo=" + titulo + " ]\n";
+		for(Temporada temporada:temporadas)
+			res=res+temporada;
+		return res;
 	}
 	
 	

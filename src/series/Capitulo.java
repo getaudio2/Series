@@ -10,6 +10,14 @@ public class Capitulo {
 	protected Temporada temporada;
 	private int num;
 	
+	public Capitulo(int num, Temporada temporada, int duration) {
+		this.DURACION = 45;
+		this.duration = duration;
+		this.num = num;
+		this.temporada = temporada;
+		this.personajes = new ArrayList<Personaje>();
+	}
+	
 	public Capitulo(Temporada temporada, int num) {
 		this.temporada = temporada;
 		this.num = num;
