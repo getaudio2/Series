@@ -40,9 +40,12 @@ public class Serie{
 	}
 
 	public boolean addTemporada(Temporada temporada) {
-		temporadas.add(temporada);
-		temporada.setSerie(this);
-		return true;
+		if (!temporadas.contains(temporada)) {
+			temporadas.add(temporada);
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 }
