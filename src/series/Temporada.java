@@ -32,7 +32,7 @@ public class Temporada {
 		}
 		return res;
 	}
-	
+	//Problema 5
 	public Temporada(int numero, Serie serie) {
 		this.numero = numero;
 		this.capitulos = new ArrayList<Capitulo>();
@@ -54,16 +54,20 @@ public class Temporada {
 	public int getDuracion() {
 		int total=0;
 		for(Capitulo capitulo:capitulos) {
-			total = total+getDuracion();
+			total = total+ capitulo.getDuracion();
 		}
 		return total;
 	}
 	@Override
 	public String toString() {
-		String res= "Serie [titulo=" + titulo + " ]\n";
-		for(Temporada temporada:temporadas)
+		String res= "Serie [titulo=" + this.serie.getTitulo() + " ]\n";
+		for(Temporada temporada: this.serie.getTemporadas())
 			res=res+temporada;
 		return res;
+	}
+	
+	public ArrayList<Capitulo> getCapitulos() {
+		return capitulos;
 	}
 	
 	

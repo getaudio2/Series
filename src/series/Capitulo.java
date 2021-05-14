@@ -18,7 +18,7 @@ public class Capitulo {
 		this.personajes = new ArrayList<Personaje>();
 	}
 	
-	public Capitulo(Temporada temporada, int num) {
+	public Capitulo(int num, Temporada temporada) {
 		this.temporada = temporada;
 		this.num = num;
 		this.personajes = new ArrayList<Personaje>();
@@ -79,5 +79,11 @@ public class Capitulo {
 		return true;
 	}
 	
+	public int getNum() {
+		return num;
+	}
 	
+	public int getDuracion() {
+		return duration;
+	}
 }

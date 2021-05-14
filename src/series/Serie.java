@@ -48,4 +48,11 @@ public class Serie{
 		}
 	}
 	
+	public String getTitulo() {
+		return titulo;
+	}
+	
+	public ArrayList<Temporada> getTemporadas() {
+		return temporadas;
+	}
 }
